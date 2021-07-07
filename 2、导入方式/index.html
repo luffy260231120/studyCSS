@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>title</title>
+        <!--
+            导入方式：
+            1、行内样式 
+            2、内部样式
+            3、外部样式
+            优先级：就近原则
+
+        -->
+
+        <style>
+            /* 2、内部样式 */
+            h1{
+                color:aquamarine;
+            }
+        </style>
+
+        <!-- 3、外部样式 -->
+        <!-- 俩种写法：
+            1) 链接式  link
+            2) 导入式 CSS2.1特有的  <style>@import url("css/style.css")</style>
+        -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- 1、行内样式：再标签元素中 写一个style属性 -->
+        <h1>标题</h1>
+    </body>
+</html>

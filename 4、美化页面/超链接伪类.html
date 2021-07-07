@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+
+        <style>
+            /* 去除下划线 默认 黑色 */
+            a{
+                text-decoration: none;
+                color:black;
+            }
+            /* 鼠标悬浮颜色 */
+            a:hover{
+                color: blue;
+                font-size: 50px;
+            }
+            /* 鼠标按住未释放的时候 */
+            a:active{
+                color: chartreuse;
+            }
+
+            /* 阴影 */
+            #price{
+                text-shadow: coral 10px 10px 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="">
+            <img src="image/1.png">
+        </a>
+
+        <p>
+            <a href="1">第一个超链接，鼠标移动后变色变大</a>
+        </p>
+
+        
+        <p>
+            <a href="1">第2个超链接，鼠标移动后变色变大</a>
+        </p>
+
+        <p id="price">
+            <a href="">第三个链接，阴影</a>
+        </p>
+    </body>
+</html>

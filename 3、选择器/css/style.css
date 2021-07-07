@@ -1,0 +1,108 @@
+/* 
+    优先级：
+    id > class > 标签
+    属性选择器 （常用）
+*/
+
+/* 1、标签选择器 */
+h1{
+    color: #111dff;
+}
+
+/* 2、类选择器 */
+/* 选中所有class属性一致的标签，可以垮标签 */
+.one{
+    color: red;
+}
+.aaaa{
+    color: green;
+}
+
+/* 3、id选择器 */
+/* id必须保证全局唯一 */
+#idaaa{
+    color: grey;
+}
+
+/* 4、层次选择器 （画个二叉树）
+    1) 后代选择器 在某个元素的后面 此结点以下的整棵树
+    2) 子选择器   一代 只有这一层 
+    3) 弟弟选择器 右结点,只对一个
+    4) 所有弟弟选择器  所有右结点
+*/
+
+/* 1) 后代 */
+body p{
+    background: red;
+}
+
+/* 2） 子选择 */
+body>p{
+    background: blue;
+}
+
+/* 3) 弟弟选择器 */
+/* 此时p2变色 */
+.xiongdi + p{
+    background: blueviolet;
+}
+
+/* 4) 所有弟弟选择器 */
+/* p2以下的p都变色 */
+.didi ~ p{
+    background: chartreuse;
+}
+
+/* 5、结构伪类选择器 */
+/* 选择ul的第一个元素 */
+ul li:first-child{
+    color: coral;
+}
+/* 选中ul的最后一个元素 */
+ul li:last-child{
+    color: cornflowerblue;
+}
+/* 选中h1  选中第一个h3标签的 */
+h3:nth-of-type(1){
+    background: black;
+}
+
+/* 鼠标移动到该区域才显示的属性 */
+a:hover{
+    background: chartreuse;
+}
+
+/* 6、属性选择器 */
+/* 1) a标签里带有id属性的 */
+a[id]{
+    background: yellow;
+}
+
+/* 2) a标签里带有id属性，且id=first的 */
+a[id=first]{
+    background: blueviolet;
+}
+
+/* 3) class中含有link
+    = 绝对等于
+    *= 包含
+    ^= 以这个开头
+    $= 以这个结尾
+*/
+a[class*="link"]{
+    background: navy;
+}
+
+/* 4) href中以http开头的 
+    用正则表达式
+*/
+a[href^=http]{
+    background: tomato;
+}
+
+/* 5) href中以pdf结尾的 
+    用正则表达式
+*/
+a[href$=pdf]{
+    background: pink;
+}

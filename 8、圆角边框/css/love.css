@@ -1,0 +1,54 @@
+
+  /* 写一个爱心 */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    /* 弹性布局 */
+    display: flex;
+    /* 横轴对齐 */
+    justify-content: center;
+    /* 纵轴对齐 */
+    align-items: center;
+    /* 该元素会被撑开屏幕高度一致 */
+    /* 100vh: 屏幕可见高度的百分之100 */
+    height: 100vh;
+}
+
+.love{
+    /* 相对于body进行相对定位 */
+    position: relative;
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    /* 旋转45° */
+    transform: rotate(45deg);
+}
+
+.love::after, .love::before{
+    /* content必须写不然没有伪元素 */
+    content: url("../image/3.png");
+    height: 200px;
+    width: 200px;
+
+    /* 都可以 圆角 */
+    /* border-radius:200px; */
+    border-radius: 50%;
+    background-color: red;
+    /* 相对于love父元素是绝对 */
+    position: absolute;
+}
+
+.love::after{
+    top: 0;
+    left: -100px;
+}
+
+
+.love::before{
+    top: -100px;
+    left: 0;
+}

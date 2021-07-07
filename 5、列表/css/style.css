@@ -1,0 +1,35 @@
+#nav{
+    width: 300px;
+    background: slategrey;
+}
+
+.title{
+    font-size: 30px;
+    text-indent: 1em;
+    /* 颜色 图片 x位置 y位置 不重复 */
+    background: red url("../image/2.png") 235px 10px no-repeat
+}
+/* 
+    list-style：
+    none 去掉原点
+    circle: 空心圆
+    decimal: 数字
+*/
+
+ul li{
+    height: 30px;
+    list-style: none;
+    text-indent: 1em;
+    background:no-repeat url("../image/3.png") 200px 2px
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: chartreuse;
+    text-decoration: underline;
+}
+

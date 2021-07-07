@@ -1,0 +1,73 @@
+/* 
+    盒子模型
+    margin 外边距
+    padding 内边距
+    border 边框
+*/
+
+/* 所有网站默认有个外边距 */
+/* 所有一般会来个初始化 */
+/* h1,ul,li,a,body{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+} */
+
+/* 
+    border 粗细，样式，颜色
+*/
+#box{
+    width: 300px;
+    border: 1px solid red;
+    /*  margin/padding
+        上 右 下 左  0 0 0 0
+        上下 左右    0 auto
+        上下左右     0   
+        上 左右 下    
+
+        auto为自适应
+        还可以单独指定：
+        margin-top
+        margin-bottom
+        margin-left
+        margin-right
+    */
+    margin: 0 auto;
+}
+
+form{
+    background: green;
+}
+
+h2{
+    font-size: 16px;
+    background-color: red;
+    line-height:30px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 选择每个输入框 */
+/* 父类div下的第n个元素的第一个input后代 */
+/* div:nth-of-type(1)>input{
+    border: 3px dashed black
+}
+
+div:nth-of-type(2)>input{
+    border: 3px dashed yellow
+}
+
+div:nth-of-type(3)>input{
+    border: 3px dashed red
+} */
+
+input{
+    border: 1px solid black;
+}
+
+div:nth-of-type(1){
+    margin: 0 5px 10px 15px;
+    border: 5px solid black;
+    padding: 10px 10px;
+}

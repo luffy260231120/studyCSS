@@ -1,0 +1,20 @@
+/* 
+   font-family 字体
+   font-size   大小
+   font-weight 粗细
+   color       颜色
+    RGB 0~F  6位16进制
+    RGBA rgba(0, 255, 255, 0.5)  a为透明度
+*/
+body{
+    font-family:楷体;
+    color: rgba(red, green, blue, 0.5);
+}
+h1{
+    /* px像素 em缩进 */
+    font-size: 50px;
+}
+
+.p1{
+    font-weight: bold;
+}

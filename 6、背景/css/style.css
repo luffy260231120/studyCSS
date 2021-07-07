@@ -1,0 +1,30 @@
+div{
+    width: 1000px;
+    height: 500px;
+    /* 边框 */
+    border: 1px solid red;
+    /* 默认全部平铺 */
+    background-image: url("../image/1.png");
+
+}
+
+.div1{
+    /* 水平平铺 */
+    background-repeat: repeat-x;
+}
+
+.div2{
+    /* 竖直平铺 */
+    background-repeat: repeat-y;
+}
+
+.div3{
+    /* 不平铺 */
+    background-repeat: no-repeat;
+}
+
+.jianbian{
+    background-color: #364168;
+background-image: linear-gradient(43deg, #364168 0%, #C850C0 47%, #FFCC70 100%);
+
+}

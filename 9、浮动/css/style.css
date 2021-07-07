@@ -1,0 +1,83 @@
+/* 
+    display: 方向不可控制
+        inline: 行内元素
+        block:  块元素
+        inline-block 是块元素，但是可以在一行
+        none:   消失
+
+    float: 浮动起来会脱离标准文档流，需要解决塌陷问题
+        left
+        right   
+        
+    clear:
+        left 左侧不允许有浮动
+        right 右测不允许有浮动
+        both 俩测不允许有浮动
+        none  
+        
+    解决父级塌陷问题：
+    1、增加父级元素高度 
+    2、在父级div最后中增加一个空div,设置clear:both
+        本来这块区域是可以浮动到的，但是这个div设置了不允许浮动，所以父级标签就把他框起来了
+        （代码中尽量避免空div）
+    3、overflow   规定的文本超过了父级后，可以用这个
+    4、在父级添加一个伪类（推荐）
+        和方法二类似，自动添加了一个伪元素
+*/
+
+*{
+    padding: 2px;
+    margin: 2px;
+}
+
+/* 标准文档流 */
+.father{
+    border:1px dashed black;
+    /* 1、增加父级元素高度  */
+    /* height: 800px; */
+
+    /* 3、父级元素增加overflow:auto */
+    /* hidden和auto都可，因为没设置高度，所以高度默认和内容一致 */
+    /* overflow: hidden; */
+}
+
+/* 4、在父级添加一个伪类 */
+.father::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.layer01{
+    border:1px dashed red;
+    /* display: inline-block; */
+    float: right;
+}
+
+.layer02{
+    border:1px dashed red;
+    /* display: inline-block; */
+    float: right;
+}
+
+.layer03{
+    border:1px dashed red;
+    /* display: inline-block; */
+    /* 左浮动后，会超出标准文档流 */
+    float: left;
+}
+
+.layer04{
+    border:1px dashed red;
+    /* display: inline-block; */
+    float: left;
+    /* 去除浮动 */
+    /* clear:both; */
+}
+
+/* 2、在父级div最后中增加一个空div,设置clear:both */
+/* .clear{
+    clear:both;
+    margin: 0;
+    padding: 0;
+} */

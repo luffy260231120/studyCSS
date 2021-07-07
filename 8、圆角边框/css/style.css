@@ -1,0 +1,47 @@
+#div1{
+    width: 100px;
+    height: 50px;
+    background: red;
+
+    
+    /* border:10px solid red; */
+    /* 
+        border-radius:  一半的半径
+        左上 右上 右下 左下 顺时针
+    */
+    border-radius:0 50px 0 0;
+}
+
+#div3{
+    height: 100px;
+    width: 300px;
+        /* 居中 要求：1外面是块元素 2 外面有固定的宽度 */
+        margin: 0 auto;
+}
+
+img{
+    box-shadow: 0 0 100px yellow;
+    border-radius: 60%;
+}
+
+#div2{
+    width: 100px;
+    height: 50px;
+    border:10px solid red;
+    /* 盒子阴影 长 宽 模糊度  */
+    box-shadow: 10px 10px 1px yellow;
+}
+
+p.box {   
+    width: 300px;   
+    border: solid 1px white;   
+    padding: 20px;   
+  }   
+      
+  p.box:before {   
+    content: "123";   
+    border: solid 1px red;   
+    padding: 2px;   
+    margin: 0 10px 0 0;   
+  }  
+
